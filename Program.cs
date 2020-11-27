@@ -12,7 +12,7 @@ namespace TI_Grafos
               "\n Jonathan William de Paiva" +
               "\n Lucas Gomes Oliveira" +
               "\n Victor Henrique de Souza Oliveira \n");
-            Console.WriteLine("Hello World!");
+          
         }
     }
 }
