@@ -17,10 +17,10 @@
 # O que deve ser feito
   Neste trabalho sua tarefa é:&nbsp;
   
-  - [ ] Modelar o problema como um grafo. -- Esta sendo definido, a ideia inicial e bipartido
-  - [ ] Implementar uma estrutura de dados para a representação de um grafo adequado ao problema, bem como operações para a edição do grafo. --- Não foi escolhido a estrutura
-  - [ ] Escrever um programa que permita: Ler o arquivo com os dados iniciais na sintaxe fornecida no item 3.1, carregando em memória a sua  representação equivalente  por meio da estrutura de dados para representação de grafos que você desenvolveu. -- A definir responsavel
-  - [ ] Implementar uma heurística sobre o grafo modelado para resolver o problema. -- A definir responsavel
+  - [ ] Modelar o problema como um grafo. -- Grafo Bipartido
+  - [ ] Implementar uma estrutura de dados para a representação de um grafo adequado ao problema, bem como operações para a edição do grafo. --- Classe Grafo/Lista
+  - [ ] Escrever um programa que permita: Ler o arquivo com os dados iniciais na sintaxe fornecida no item 3.1, carregando em memória a sua  representação equivalente  por meio da estrutura de dados para representação de grafos que você desenvolveu. -- V
+  - [ ] Implementar uma heurística sobre o grafo modelado para resolver o problema. -- A definir 
   - [ ] Imprimir uma relação que mostre as disciplinas alocada (com o nome do professor) em cada horário para cada período. -- A definir responsavel
   - [ ] Um documento contendo introdução (descrição do problema), indicando os objetivos do trabalho e as linhas gerais de seu desenvolvimento; uma explicação detalhada da solução adotada para modelar e resolver o problema usando a teoria de grafos (apresentar como o  grafo  foi  modelado);  uma  descrição  do  algoritmo  utilizado  para  resolver  o  problema proposto (pode incluir o pseudocódigodo algoritmo), o código fonte; os testes realizados e seus resultados.Uma conclusão ressaltando o que de mais importante foi observado. Se utilizar alguma referência, não se esqueça de fazer a citação.  -- Douglas?
   - [ ] Entregue  também  um  arquivo .txt orientando  como  deve  ser  executado  o  código. -- A definir responsavel
