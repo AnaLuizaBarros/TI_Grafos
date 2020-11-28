@@ -67,33 +67,17 @@ namespace TI_Grafos
             Aresta aresta = new Aresta(profes, disc, per);
             arestas.Add(aresta);
         }
-        /*
-        public void adicionarArestaDirigida(Vertice Vert1, Vertice Vert2, int peso, int direcao)
-        {
-            matadj[Vert1.Vert, Vert2.Vert] = 1;
-            matadj[Vert2.Vert, Vert1.Vert] = 1;
-            Aresta aresta = new Aresta(Vert1, Vert2, peso, direcao);
-            arestas.Add(aresta);
 
-
-        }*/
         public void printarMatriz()
         {
-            /* StringBuilder sb = new StringBuilder();
-             sb.AppendLine("\nMatriz de adjacencia ");
-             for (int i = 1; i < this.numVertice; i++)
-             {
-                 for (int j = 1; j < this.numVertice; j++)
-                 {
-                     sb.Append(" " + matadj[i, j] + " ");
-                 }
-                 sb.AppendLine("\n ");
-             }
-             return sb.ToString();*/
+           
             professor.ForEach(lv => Console.WriteLine(lv.Nome + "\t" + lv.Disciplina.Disciplinas));
-           // Disciplina.ForEach(lv => Console.WriteLine(lv.Nome + "\t" + lv.Disciplina));
-            Console.WriteLine("Periodo");
+   
+            Console.WriteLine("\n Periodo");
             periodo.ForEach(lv => Console.WriteLine(lv.Periodos + "\t"));
+
+            Console.WriteLine("\n ");
+            arestas.ForEach(lv => Console.WriteLine(lv.Professor.Nome + "\t" + lv.Disciplina.Disciplinas + "\t" + lv.Periodo.Periodos));
         }
 
         public List<Aresta> GetArestas()
