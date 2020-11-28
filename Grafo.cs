@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace TI_Grafos
 {
-    class Grafos
+    class Grafo
     {
         public List<Aresta> arestas = new List<Aresta>();
-        public List<Vertice> vertices = new List<Vertice>();
+        public List<Professor> professor = new List<Professor>();
+        public List<Periodo> periodo = new List<Periodo>();
 
         private int[,] matadj;
         public int numVertice;
@@ -43,21 +45,29 @@ namespace TI_Grafos
 
         }
 
-        public void adicionarVertice(Vertice vertice)
+        public void adicionarVerticeProfessor(Professor prof, Disciplina disciplina)
         {
-            if (vertices.Contains(vertice))
+            var aux = new Professor(prof.Nome, disciplina);
+            if (professor.Contains(aux))
             {
 
             }
-            else vertices.Add(vertice);
+            else professor.Add(aux);
         }
-        public void adicionarAresta(Vertice Vert1, Vertice Vert2, int peso)
+        public void adicionarVerticePeriodo(Periodo pe)
         {
-            matadj[Vert1.Vert, Vert2.Vert] = 1;
-            matadj[Vert2.Vert, Vert1.Vert] = 1;
-            Aresta aresta = new Aresta(Vert1, Vert2, peso);
+            if (periodo.Contains(pe))
+            {
+
+            }
+            else periodo.Add(pe);
+        }
+       public void adicionarAresta(Professor profes, Disciplina disc, Periodo per)
+        {
+            Aresta aresta = new Aresta(profes, disc, per);
             arestas.Add(aresta);
         }
+        /*
         public void adicionarArestaDirigida(Vertice Vert1, Vertice Vert2, int peso, int direcao)
         {
             matadj[Vert1.Vert, Vert2.Vert] = 1;
@@ -66,20 +76,24 @@ namespace TI_Grafos
             arestas.Add(aresta);
 
 
-        }
-        public string printarMatriz()
+        }*/
+        public void printarMatriz()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("\nMatriz de adjacencia ");
-            for (int i = 1; i < this.numVertice; i++)
-            {
-                for (int j = 1; j < this.numVertice; j++)
-                {
-                    sb.Append(" " + matadj[i, j] + " ");
-                }
-                sb.AppendLine("\n ");
-            }
-            return sb.ToString();
+            /* StringBuilder sb = new StringBuilder();
+             sb.AppendLine("\nMatriz de adjacencia ");
+             for (int i = 1; i < this.numVertice; i++)
+             {
+                 for (int j = 1; j < this.numVertice; j++)
+                 {
+                     sb.Append(" " + matadj[i, j] + " ");
+                 }
+                 sb.AppendLine("\n ");
+             }
+             return sb.ToString();*/
+            professor.ForEach(lv => Console.WriteLine(lv.Nome + "\t" + lv.Disciplina.Disciplinas));
+           // Disciplina.ForEach(lv => Console.WriteLine(lv.Nome + "\t" + lv.Disciplina));
+            Console.WriteLine("Periodo");
+            periodo.ForEach(lv => Console.WriteLine(lv.Periodos + "\t"));
         }
 
         public List<Aresta> GetArestas()

@@ -11,3 +11,16 @@ F:\JAVALI\CSHARPAO\TI_Grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.dll
 F:\JAVALI\CSHARPAO\TI_Grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.pdb
 F:\JAVALI\CSHARPAO\TI_Grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.genruntimeconfig.cache
 F:\JAVALI\CSHARPAO\TI_Grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.csproj.CoreCompileInputs.cache
+F:\JAVALI\CSHARPAO\TI grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.csprojAssemblyReference.cache
+F:\JAVALI\CSHARPAO\TI grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.AssemblyInfoInputs.cache
+F:\JAVALI\CSHARPAO\TI grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.AssemblyInfo.cs
+F:\JAVALI\CSHARPAO\TI grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.csproj.CoreCompileInputs.cache
+F:\JAVALI\CSHARPAO\TI grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.dll
+F:\JAVALI\CSHARPAO\TI grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.pdb
+F:\JAVALI\CSHARPAO\TI grafos\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.exe
+F:\JAVALI\CSHARPAO\TI grafos\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.deps.json
+F:\JAVALI\CSHARPAO\TI grafos\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.runtimeconfig.json
+F:\JAVALI\CSHARPAO\TI grafos\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.runtimeconfig.dev.json
+F:\JAVALI\CSHARPAO\TI grafos\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.dll
+F:\JAVALI\CSHARPAO\TI grafos\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.pdb
+F:\JAVALI\CSHARPAO\TI grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.genruntimeconfig.cache

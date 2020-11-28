@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\JAVALI\\CSHARPAO\\TI_Grafos\\TI_Grafos\\TI_Grafos.csproj": {}
+    "F:\\JAVALI\\CSHARPAO\\TI grafos\\TI_Grafos\\TI_Grafos.csproj": {}
   },
   "projects": {
-    "F:\\JAVALI\\CSHARPAO\\TI_Grafos\\TI_Grafos\\TI_Grafos.csproj": {
+    "F:\\JAVALI\\CSHARPAO\\TI grafos\\TI_Grafos\\TI_Grafos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\JAVALI\\CSHARPAO\\TI_Grafos\\TI_Grafos\\TI_Grafos.csproj",
+        "projectUniqueName": "F:\\JAVALI\\CSHARPAO\\TI grafos\\TI_Grafos\\TI_Grafos.csproj",
         "projectName": "TI_Grafos",
-        "projectPath": "F:\\JAVALI\\CSHARPAO\\TI_Grafos\\TI_Grafos\\TI_Grafos.csproj",
+        "projectPath": "F:\\JAVALI\\CSHARPAO\\TI grafos\\TI_Grafos\\TI_Grafos.csproj",
         "packagesPath": "C:\\Users\\ASTRA\\.nuget\\packages\\",
-        "outputPath": "F:\\JAVALI\\CSHARPAO\\TI_Grafos\\TI_Grafos\\obj\\",
+        "outputPath": "F:\\JAVALI\\CSHARPAO\\TI grafos\\TI_Grafos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

@@ -1,4 +1,3 @@
-8
 Introdução a pesquisa;Paulo Amaral;4
 Algoritmos em grafos;Michelle;4
 Redes de computadores;Michelle;4
