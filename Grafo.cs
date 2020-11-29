@@ -28,18 +28,8 @@ namespace TI_Grafos
         {
             Aresta aresta = new Aresta(profes, disc, per);
             arestas.Add(aresta);
-           /* if(arestas.Where(a => a.Professor.Nome == profes.Nome).Count() > 2 ) {
-                arestas.Remove(aresta);
-                foreach (var item in arestas)
-                {
-                    if (arestas.Where(a => a.Professor.Nome == item.Professor.Nome).Count() == 1) {
-                        aresta = new Aresta(item.Professor, disc, per);
-                        arestas.Add(aresta);
-                    }
-                }             
-            }     */     
         }
-        public void VerificarAsrestas() {
+        public void VerificarArestas() {
             Aresta aresta = new Aresta();                   
             foreach (var item in arestas.ToList())
             {
@@ -62,7 +52,7 @@ namespace TI_Grafos
         
         public void adicionarHorarios()
         {
-            VerificarAsrestas();
+            VerificarArestas();
             arestas.ForEach(lv =>
             {
                 if (!Horario.Any(p => p.Professor.Nome == lv.Professor.Nome))
