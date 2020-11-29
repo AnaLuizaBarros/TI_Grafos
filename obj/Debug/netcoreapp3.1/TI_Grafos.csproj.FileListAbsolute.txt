@@ -37,3 +37,14 @@ F:\JAVALI\CSHARPAO\Nova pasta\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.runtim
 F:\JAVALI\CSHARPAO\Nova pasta\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.dll
 F:\JAVALI\CSHARPAO\Nova pasta\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.pdb
 F:\JAVALI\CSHARPAO\Nova pasta\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.genruntimeconfig.cache
+C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.exe
+C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.deps.json
+C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.runtimeconfig.json
+C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.runtimeconfig.dev.json
+C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.dll
+C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.pdb
+C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.csprojAssemblyReference.cache
+C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.AssemblyInfoInputs.cache
+C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.AssemblyInfo.cs
+C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.dll
+C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.pdb

@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "F:\\JAVALI\\CSHARPAO\\Nova pasta\\TI_Grafos\\TI_Grafos.csproj": {}
+    "C:\\Users\\victo\\Desktop\\TI_Grafos\\TI_Grafos\\TI_Grafos.csproj": {}
   },
   "projects": {
-    "F:\\JAVALI\\CSHARPAO\\Nova pasta\\TI_Grafos\\TI_Grafos.csproj": {
+    "C:\\Users\\victo\\Desktop\\TI_Grafos\\TI_Grafos\\TI_Grafos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\JAVALI\\CSHARPAO\\Nova pasta\\TI_Grafos\\TI_Grafos.csproj",
+        "projectUniqueName": "C:\\Users\\victo\\Desktop\\TI_Grafos\\TI_Grafos\\TI_Grafos.csproj",
         "projectName": "TI_Grafos",
-        "projectPath": "F:\\JAVALI\\CSHARPAO\\Nova pasta\\TI_Grafos\\TI_Grafos.csproj",
-        "packagesPath": "C:\\Users\\ASTRA\\.nuget\\packages\\",
-        "outputPath": "F:\\JAVALI\\CSHARPAO\\Nova pasta\\TI_Grafos\\obj\\",
+        "projectPath": "C:\\Users\\victo\\Desktop\\TI_Grafos\\TI_Grafos\\TI_Grafos.csproj",
+        "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\victo\\Desktop\\TI_Grafos\\TI_Grafos\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ASTRA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -56,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
