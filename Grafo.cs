@@ -56,21 +56,30 @@ namespace TI_Grafos
         public void printarMatriz()
         {
             adicionarHorarios();
+            int maxDisciplinas = arestas.Max(p => p.Disciplina.Disciplinas.Length);
+            int maxProfessor = arestas.Max(p => p.Professor.Nome.Length);
+            int maxPeriodos = arestas.Max(p => p.Periodo.Periodos.ToString().Length);
             Console.WriteLine("\n Professores");
             professor.ForEach(lv => Console.WriteLine("Professor: " + lv.Nome ));
 
             Console.WriteLine("\n Disciplina e Periodo");
-            periodo.ForEach(lv => Console.WriteLine("Disciplina: " + lv.Disciplina.Disciplinas + " \t" + "Periodo: " + lv.Periodos));
+            periodo.ForEach(lv => Console.WriteLine("Disciplina: " + lv.Disciplina.Disciplinas + adicionarEspaco(lv.Disciplina.Disciplinas, maxDisciplinas) + " \t" + "Periodo: " + lv.Periodos));
 
             Console.WriteLine("\n Arestas");
-            arestas.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + " \t" + "Periodo: " + lv.Periodo.Periodos));
+            arestas.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + adicionarEspaco(lv.Professor.Nome, maxProfessor) + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + adicionarEspaco(lv.Disciplina.Disciplinas, maxDisciplinas) + " \t" + "Periodo: " + lv.Periodo.Periodos));
  
             Console.WriteLine("\n Horarios");
-            Horario.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + "\t" + "Periodo: " + lv.Periodo.Periodos + "\t" + "Horario: " + lv.Horarios));
+            Horario.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + adicionarEspaco(lv.Professor.Nome, maxProfessor) + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + adicionarEspaco(lv.Disciplina.Disciplinas, maxDisciplinas) + "\t" + "Periodo: " + lv.Periodo.Periodos + adicionarEspaco(lv.Periodo.Periodos.ToString(), maxPeriodos) + "\t" + "Horario: " + lv.Horarios));
 
             Console.WriteLine("\n Arestas removidas");
-            arestasRemovidas.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + "\t" + "Periodo: " + lv.Periodo.Periodos ));
+            arestasRemovidas.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + adicionarEspaco(lv.Professor.Nome, maxProfessor) + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + adicionarEspaco(lv.Disciplina.Disciplinas, maxDisciplinas) + "\t" + "Periodo: " + lv.Periodo.Periodos ));
+            
 
+        }
+
+        private string adicionarEspaco(string nome, int max)
+        {
+            return nome.Length < max ? new String(' ', max - nome.Length) : "";
         }
     }
 }
