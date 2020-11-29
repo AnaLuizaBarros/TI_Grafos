@@ -1,13 +1,39 @@
+Algoritmos e técnicas de programação;Faber;1
+Desenvolvimento de interfaces web;Leandro;1
+Filosofia: razão e modernidade;Luciano;1
+Introdução à computação;Juliana;1
+Algoritmos e estruturas de dados;Eveline;2
+Arquitetura de computadores;Claudiney;2
+Cálculo 1;Jane;2
+Fundamentos de sistemas de informação;Juliana;2
+Bancos de dados;Claudiney;3
+Estatística e probabilidade;Luisa;3
+Modelagem de processos de negocios;Juliana;3
+Programação orientada por objetos;Paulo Amaral;3
+Sistemas operacionais;Paulo Amaral;3
 Introdução a pesquisa;Paulo Amaral;4
 Algoritmos em grafos;Michelle;4
 Redes de computadores;Michelle;4
 Engenharia de requisitos;Sandra;4
-Projeto de banco de dados;Claudiney;4
-Introdução a computação;Claudiney;4
-Computadores e sociedade;Sandra;5
-Fundamentos de testes;Paulo Amaral;5
-Cultura religiosa um;Robson;5
-Cultura religiosa dois;Robson;4
-CUltura em grafos;Michelle;5
-Algoritmos e tecnicas de programacao;Fabia;6
-Grafos;Michelle;8
+Fundamentos de testes;Claudiney;5
+Desenvolvimento de aplicações distribuídas;Leandro;5
+Fundamentos de projeto e análise de algoritmos;Eveline;5
+Projeto de software;Juliana;5
+Redes de computadores 2;Michelle;5
+Businesse intelligence;Juliana;6
+Filosofia: antropologia e ética;Luciano;6
+Gerencia de projeto de software;Juliana;6
+Tecnologias da informação e do conhecimento;Eveline;6
+Teste e manutenção de software;Claudiney;6
+Tópicos em sistemas de informação;Leandro;6
+Ciência de dados;Luisa;7
+Cultura religiosa: Fenômeno Religioso;Luciano;7
+Desenvolvimento de aplicações móveis;Faber;7
+Planejamento de capacidade de avaliação de sistemas computacionais;Paulo Amaral;7
+Recuperação de informação na web e redes sociais;Faber;7
+Computadores e sociedade;Sandra;8
+Cultura religiosa: Pessoa e sociedade;Luciano;8
+Governança de tecnologia da informação;Juliana;8
+Segurança e auditoria de sistemas;Faber;8
+Tópicos em sistemas de software;Claudiney;8
+Trabalho de conclusão de curso;Paulo Amaral;8
