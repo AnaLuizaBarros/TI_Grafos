@@ -10,40 +10,13 @@ namespace TI_Grafos
         public List<Aresta> arestas = new List<Aresta>();
         public List<Professor> professor = new List<Professor>();
         public List<Periodo> periodo = new List<Periodo>();
-
-        private int[,] matadj;
-        public int numVertice;
-        private int[] tDescoberta;
-        private int[] tTermino;
-        private Vertice[] pais;
-        private int[] componente;
-        private int componentes;
-        private bool ciclo;
-
-
-        public int NumVertice { get; set; }
+        public List<Horario> Horario = new List<Horario>();
 
         public Grafo()
         {
 
         }
 
-        public Grafo(int NumVertice)
-        {
-            this.numVertice = NumVertice;
-
-            matadj = new int[numVertice, numVertice];
-            tDescoberta = new int[numVertice];
-            tTermino = new int[numVertice];
-            pais = new Vertice[numVertice];
-            componente = new int[numVertice];
-
-
-            for (int i = 1; i < numVertice; i++)
-                for (int j = 1; j < numVertice; j++)
-                    matadj[i, j] = 0;
-
-        }
 
         public void adicionarVerticeProfessor(Professor prof, Disciplina disciplina)
         {
@@ -62,77 +35,56 @@ namespace TI_Grafos
             }
             else periodo.Add(pe);
         }
-       public void adicionarAresta(Professor profes, Disciplina disc, Periodo per)
+        public void adicionarAresta(Professor profes, Disciplina disc, Periodo per)
         {
             Aresta aresta = new Aresta(profes, disc, per);
             arestas.Add(aresta);
         }
+        public void adicionarHorarios()
+        {
+            arestas.ForEach(lv =>
+            {
+                var prof = new Horario(lv.Professor);
+                var period = new Horario(lv.Periodo);
 
+                if (Horario.Any(p => p.Professor.Nome == lv.Professor.Nome) || Horario.Any(p => p.Periodo == lv.Periodo))
+                {
+                    if (Horario.Any(p => p.Professor.Nome == lv.Professor.Nome) && Horario.Any(p => p.Periodo == lv.Periodo) && Horario.Any(p => p.Horarios == 1))
+                    {
+                    }
+                    else if ((Horario.Any(p => p.Professor.Nome == lv.Professor.Nome) && Horario.Any(p => p.Periodo == lv.Periodo) && Horario.Any(p => p.Horarios == 2)))
+                    {
+                    }
+                    else if ((Horario.Any(p => p.Professor.Nome == lv.Professor.Nome) && Horario.Any(p => p.Periodo == lv.Periodo) && Horario.Any(p => p.Horarios == 2)))
+                    {
+                    }
+                    else
+                    {
+                        Horario.Add(new Horario(lv.Professor, lv.Disciplina, lv.Periodo, 2));
+                    }
+
+                }
+                else Horario.Add(new Horario(lv.Professor, lv.Disciplina, lv.Periodo, 1));
+            });
+
+        }
         public void printarMatriz()
         {
-           
-            professor.ForEach(lv => Console.WriteLine(lv.Nome + "\t" + lv.Disciplina.Disciplinas));
-   
+            adicionarHorarios();
+            Console.WriteLine("\n Professores e disciplinas");
+            professor.ForEach(lv => Console.WriteLine("Professor: " + lv.Nome + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas));
+
             Console.WriteLine("\n Periodo");
-            periodo.ForEach(lv => Console.WriteLine(lv.Periodos + "\t"));
+            periodo.ForEach(lv => Console.WriteLine("Periodo: " + lv.Periodos + "\t"));
 
-            Console.WriteLine("\n ");
-            arestas.ForEach(lv => Console.WriteLine(lv.Professor.Nome + "\t" + lv.Disciplina.Disciplinas + "\t" + lv.Periodo.Periodos));
+            Console.WriteLine("\n Arestas");
+            arestas.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + " \t" + "Periodo: " + lv.Periodo.Periodos));
+
+            Console.WriteLine("\n Horarios");
+            Horario.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + "\t" + "Periodo: " + lv.Periodo.Periodos + "\t" + "Horario: " + lv.Horarios));
+
         }
 
-        public List<Aresta> GetArestas()
-        {
-            return this.arestas;
-        }
-        public bool isAdjacente(Vertice Vert1, Vertice Vert2)
-        {
-            for (int i = 1; i < numVertice; i++)
-            {
-                for (int j = 1; j < numVertice; j++)
-                {
-                    if (matadj[Vert1.Vert, Vert2.Vert] == 1)
-                    {
-                        Console.WriteLine("Os vertices {0} e {1} sao adjacentes", Vert1.Vert, Vert2.Vert);
-                        return true;
-                    }
-                }
-
-            }
-            return false;
-        }
-
-
-        public List<Vertice> adjacentes(Vertice vertice)
-        {
-            List<Vertice> adjacentes = new List<Vertice>();
-
-            for (int j = 1; j < numVertice; j++)
-            {
-                if (matadj[vertice.Vert, j] > 0)
-                {
-                    adjacentes.Add(new Vertice(j));
-
-                }
-            }
-
-            return adjacentes;
-        }
-
-        public int getGrau(Vertice vertice)
-        {
-            int grau = 0;
-
-            for (int j = 1; j < this.numVertice; j++)
-            {
-
-                if (matadj[vertice.Vert, j] == 1)
-                {
-                    grau++;
-
-                }
-            }
-            return grau;
-        }
 
     }
 }
