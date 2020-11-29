@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\victo\\Desktop\\TI_Grafos\\TI_Grafos\\TI_Grafos.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\victo\\Desktop\\TI_Grafos\\TI_Grafos\\TI_Grafos.csproj",
         "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\victo\\Desktop\\TI_Grafos\\TI_Grafos\\obj\\",
+=======
+    "F:\\JAVALI\\CSHARPAO\\TI Grafos\\TI_Grafos\\TI_Grafos.csproj": {}
+  },
+  "projects": {
+    "F:\\JAVALI\\CSHARPAO\\TI Grafos\\TI_Grafos\\TI_Grafos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\JAVALI\\CSHARPAO\\TI Grafos\\TI_Grafos\\TI_Grafos.csproj",
+        "projectName": "TI_Grafos",
+        "projectPath": "F:\\JAVALI\\CSHARPAO\\TI Grafos\\TI_Grafos\\TI_Grafos.csproj",
+        "packagesPath": "C:\\Users\\ASTRA\\.nuget\\packages\\",
+        "outputPath": "F:\\JAVALI\\CSHARPAO\\TI Grafos\\TI_Grafos\\obj\\",
+>>>>>>> 661af4459d731dc411c0e7942000336ddb6dd5b5
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -12,6 +12,7 @@ namespace TI_Grafos
         public List<Professor> professor = new List<Professor>();
         public List<Periodo> periodo = new List<Periodo>();
         public List<Horario> Horario = new List<Horario>();
+<<<<<<< HEAD
          
         public Grafo() //Construtor padrão
         {
@@ -24,6 +25,13 @@ namespace TI_Grafos
             //Se a lista Professor não conter o professor que está sendo passado por parâmetro, ela será adicionado, caso o retorno seja false, nada será feito.
             if (!professor.Contains(prof))
                     professor.Add(prof);
+=======
+
+        public void adicionarVerticeProfessor(Professor prof)
+        {
+            if (!professor.Contains(prof))
+                professor.Add(prof);
+>>>>>>> 661af4459d731dc411c0e7942000336ddb6dd5b5
         }
 
         //Método que recebe por parâmetro um período e sua respectiva disciplina a fim de inserir na lista de periodos.
@@ -31,8 +39,11 @@ namespace TI_Grafos
         {
             //variável contendo a informação da instanciação Periodo.
             var aux = new Periodo(pe.Periodos, disciplina);
+<<<<<<< HEAD
 
             //Se a lista Periodo não conter o periodo e a disciplina que estão na variável auxiliar, será retornado true e será feito a adição. Caso o retorno seja false, nada ocorrerá.
+=======
+>>>>>>> 661af4459d731dc411c0e7942000336ddb6dd5b5
             if (!periodo.Contains(aux))
                 periodo.Add(aux);
         }
@@ -42,6 +53,7 @@ namespace TI_Grafos
         {
             //Fazendo a instanciação e a inserção na lista de Arestas.
             Aresta aresta = new Aresta(profes, disc, per);
+<<<<<<< HEAD
             arestas.Add(aresta);     
         }
 
@@ -82,6 +94,33 @@ namespace TI_Grafos
                 //Se nao cair em nenhuma condicional, nada é feito.
             });
             Horario = Horario.OrderBy(h => h.Periodo.Periodos).ToList(); //Realizando a ordenação por período na lista Horario
+=======
+            arestas.Add(aresta);
+        }
+        public void VerificarArestas() {
+            Aresta aresta = new Aresta();                   
+            foreach (var item in arestas.ToList())
+            {
+                if (arestas.Where(a => a.Periodo.Periodos == item.Periodo.Periodos).Count() > 2)
+                {
+                    arestasRemovidas.Add(item);
+                    arestas.Remove(item);                  
+                }
+            }
+            arestasRemovidas = arestasRemovidas.OrderBy(a => a.Periodo.Periodos).ToList();
+        }                
+        public void adicionarHorarios()
+        {
+            VerificarArestas();
+            arestas.ForEach(lv =>
+            {
+                if (!Horario.Any(p => p.Periodo.Periodos == lv.Periodo.Periodos))
+                    Horario.Add(new Horario(lv.Professor, lv.Disciplina, lv.Periodo, 1));
+                else if(Horario.First(p => p.Periodo.Periodos == lv.Periodo.Periodos).Horarios != 2)
+                    Horario.Add(new Horario(lv.Professor, lv.Disciplina, lv.Periodo, 2));
+            });
+            Horario =  Horario.OrderBy(h => h.Periodo.Periodos).ToList();
+>>>>>>> 661af4459d731dc411c0e7942000336ddb6dd5b5
         }
 
         //Método responsável pela impressão de forma organizada dos elementos contidos em todas as listas criadas.
@@ -96,7 +135,7 @@ namespace TI_Grafos
 
             Console.WriteLine("\n Arestas");
             arestas.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + " \t" + "Periodo: " + lv.Periodo.Periodos));
-
+ 
             Console.WriteLine("\n Horarios");
             Horario.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + "\t" + "Periodo: " + lv.Periodo.Periodos + "\t" + "Horario: " + lv.Horarios));
 

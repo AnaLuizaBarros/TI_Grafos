@@ -37,6 +37,7 @@ F:\JAVALI\CSHARPAO\Nova pasta\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.runtim
 F:\JAVALI\CSHARPAO\Nova pasta\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.dll
 F:\JAVALI\CSHARPAO\Nova pasta\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.pdb
 F:\JAVALI\CSHARPAO\Nova pasta\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.genruntimeconfig.cache
+<<<<<<< HEAD
 C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.exe
 C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.deps.json
 C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.runtimeconfig.json
@@ -48,3 +49,18 @@ C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.Ass
 C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.AssemblyInfo.cs
 C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.dll
 C:\Users\victo\Desktop\TI_Grafos\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.pdb
+=======
+D:\Drive\Projetos\.NET\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.exe
+D:\Drive\Projetos\.NET\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.deps.json
+D:\Drive\Projetos\.NET\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.runtimeconfig.json
+D:\Drive\Projetos\.NET\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.runtimeconfig.dev.json
+D:\Drive\Projetos\.NET\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.dll
+D:\Drive\Projetos\.NET\TI_Grafos\bin\Debug\netcoreapp3.1\TI_Grafos.pdb
+D:\Drive\Projetos\.NET\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.csprojAssemblyReference.cache
+D:\Drive\Projetos\.NET\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.AssemblyInfoInputs.cache
+D:\Drive\Projetos\.NET\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.AssemblyInfo.cs
+D:\Drive\Projetos\.NET\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.csproj.CoreCompileInputs.cache
+D:\Drive\Projetos\.NET\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.dll
+D:\Drive\Projetos\.NET\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.pdb
+D:\Drive\Projetos\.NET\TI_Grafos\obj\Debug\netcoreapp3.1\TI_Grafos.genruntimeconfig.cache
+>>>>>>> 661af4459d731dc411c0e7942000336ddb6dd5b5
