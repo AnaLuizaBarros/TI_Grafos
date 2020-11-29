@@ -21,7 +21,7 @@ namespace TI_Grafos
         //Método responsável por receber por parâmetro um professor e fazer sua adição na lista de Professores.
         public void adicionarVerticeProfessor(Professor prof)
         {
-            //Se a lista Professor não conter o professor que está sendo passado por parâmetro, ela será adicionado, caso o retorno seja false, nada será feito.
+            //Se a lista Professor não conter o professor que está sendo passado por parâmetro, ela será adicionado, caso contrario nada será feito.
             if (!professor.Contains(prof))
                     professor.Add(prof);
         }
@@ -32,7 +32,7 @@ namespace TI_Grafos
             //variável contendo a informação da instanciação Periodo.
             var aux = new Periodo(pe.Periodos, disciplina);
 
-            //Se a lista Periodo não conter o periodo e a disciplina que estão na variável auxiliar, será retornado true e será feito a adição. Caso o retorno seja false, nada ocorrerá.
+            //Se a lista Periodo não conter o periodo e a disciplina que estão na variável auxiliar,será feito a adição. Caso contrario , nada ocorrerá.
             if (!periodo.Contains(aux))
                 periodo.Add(aux);
         }
@@ -49,9 +49,9 @@ namespace TI_Grafos
         public void VerificarArestas() 
         {
             Aresta aresta = new Aresta();
-            foreach (var item in arestas.ToList()) //Percorrendo cada elemento presente na lisya Aresta
+            foreach (var item in arestas.ToList()) //Percorrendo cada elemento presente na lista Aresta
             {
-                //Se ocorrer de um professor ministrar mais de duas matérias no mesmo período, ele será retirado da lista de Arestas 
+                //Se existir mais de duas arestas com o mesmo periodo, ele será retirado da lista de Arestas 
                 //e colocado em outra lista denominada arestasRemovidas, para ser mostrado ao final do processo o conflito.
                 if (arestas.Where(a => a.Periodo.Periodos == item.Periodo.Periodos).Count() > 2)
                 {
@@ -63,7 +63,7 @@ namespace TI_Grafos
             //Percorre a lista de arestas
             foreach (var item in arestas.ToList())
             {
-                //Se existem professores com mais de duas disciplinas na arestas, ele será removido e será adixionado na lista de arestasRemovidas.
+                //Se existem professores com mais de duas disciplinas na arestas, ele será removido e será adicionado na lista de arestasRemovidas.
                 if (arestas.Where(a => a.Professor.Nome == item.Professor.Nome).Count() > 2)
                 {
                     arestasRemovidas.Add(item);
@@ -101,7 +101,7 @@ namespace TI_Grafos
                 if (!Horario.Any(p => p.Periodo.Periodos == lv.Periodo.Periodos))
                     Horario.Add(new Horario(lv.Professor, lv.Disciplina, lv.Periodo, 1));
 
-                //Se não, verifica se o horario é 1 ou diferente de 2, (irrelevante) e adiciona no horario 2. 
+                //Se não, verifica se o horario é diferente de 2, (irrelevante) e adiciona no horario 2. 
                 else if (Horario.First(p => p.Periodo.Periodos == lv.Periodo.Periodos).Horarios != 2)
                     Horario.Add(new Horario(lv.Professor, lv.Disciplina, lv.Periodo, 2));
 
