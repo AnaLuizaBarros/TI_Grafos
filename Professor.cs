@@ -26,7 +26,7 @@ namespace TI_Grafos
 
         public override bool Equals(object obj)
         {
-            return this.Nome == (obj as Professor).Nome && this.disciplina.Equals((obj as Professor).Disciplina);
+            return this.nome == (obj as Professor).Nome && this.disciplina.Equals((obj as Professor).Disciplina);
         }
 
         public override int GetHashCode()
