@@ -1,9 +1,0 @@
-8
-Introdução a pesquisa;Paulo Amaral;4
-Algoritmos em grafos;Michelle;4
-Redes de computadores;Michelle;4
-Engenharia de requisitos;Sandra;4
-Banco de dados;Claudiney;4
-Introdução a computação;Claudiney;4
-Computadores e sociedade;Sandra;5
-Fundamentos de testes;Claudiney;5
