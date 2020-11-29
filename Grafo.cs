@@ -8,6 +8,7 @@ namespace TI_Grafos
     class Grafo
     {
         public List<Aresta> arestas = new List<Aresta>();
+        public List<Aresta> arestasRemovidas = new List<Aresta>();
         public List<Professor> professor = new List<Professor>();
         public List<Periodo> periodo = new List<Periodo>();
         public List<Horario> Horario = new List<Horario>();
@@ -39,14 +40,43 @@ namespace TI_Grafos
         {
             Aresta aresta = new Aresta(profes, disc, per);
             arestas.Add(aresta);
+           /* if(arestas.Where(a => a.Professor.Nome == profes.Nome).Count() > 2 ) {
+                arestas.Remove(aresta);
+                foreach (var item in arestas)
+                {
+                    if (arestas.Where(a => a.Professor.Nome == item.Professor.Nome).Count() == 1) {
+                        aresta = new Aresta(item.Professor, disc, per);
+                        arestas.Add(aresta);
+                    }
+                }             
+            }     */     
         }
+        public void VerificarAsrestas() {
+            Aresta aresta = new Aresta();                   
+            foreach (var item in arestas.ToList())
+            {
+                if (arestas.Where(a => a.Professor.Nome == item.Professor.Nome).Count() > 2)
+                {
+                    arestasRemovidas.Add(item);
+                    arestas.Remove(item);
+                    foreach (var prof in arestas.ToList())
+                    {                   
+                        if (arestas.Where(a => a.Professor.Nome == prof.Professor.Nome).Count() == 1)
+                        {                                                  
+                            aresta = new Aresta(prof.Professor, item.Disciplina, item.Periodo);
+                            arestas.Add(aresta);
+                        }
+                    }
+                }
+            }
+         }
+            
+        
         public void adicionarHorarios()
         {
+            VerificarAsrestas();
             arestas.ForEach(lv =>
             {
-                var prof = new Horario(lv.Professor);
-                var period = new Horario(lv.Periodo);
-
                 if (Horario.Any(p => p.Professor.Nome == lv.Professor.Nome) || Horario.Any(p => p.Periodo == lv.Periodo))
                 {
                     if (Horario.Any(p => p.Professor.Nome == lv.Professor.Nome) && Horario.Any(p => p.Periodo == lv.Periodo) && Horario.Any(p => p.Horarios == 1))
@@ -82,6 +112,9 @@ namespace TI_Grafos
 
             Console.WriteLine("\n Horarios");
             Horario.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + "\t" + "Periodo: " + lv.Periodo.Periodos + "\t" + "Horario: " + lv.Horarios));
+
+            Console.WriteLine("\n Arestas removidas");
+            arestasRemovidas.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + "\t" + "Periodo: " + lv.Periodo.Periodos ));
 
         }
 

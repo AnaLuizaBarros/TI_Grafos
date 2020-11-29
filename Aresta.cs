@@ -11,6 +11,8 @@ namespace TI_Grafos
         private Periodo periodo;
         private Disciplina disciplina;
 
+        public Aresta() { 
+        }
         public Aresta(Professor professor, Disciplina disciplina, Periodo periodo )
         {
             this.Professor = professor;
