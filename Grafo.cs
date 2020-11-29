@@ -33,34 +33,25 @@ namespace TI_Grafos
             Aresta aresta = new Aresta();                   
             foreach (var item in arestas.ToList())
             {
-                if (arestas.Where(a => a.Professor.Nome == item.Professor.Nome).Count() > 2)
+                if (arestas.Where(a => a.Periodo.Periodos == item.Periodo.Periodos).Count() > 2)
                 {
                     arestasRemovidas.Add(item);
-                    arestas.Remove(item);
-                    foreach (var prof in arestas.ToList())
-                    {                   
-                        if (arestas.Where(a => a.Professor.Nome == prof.Professor.Nome).Count() == 1)
-                        {                                                  
-                            aresta = new Aresta(prof.Professor, item.Disciplina, item.Periodo);
-                            arestas.Add(aresta);
-                        }
-                    }
+                    arestas.Remove(item);                  
                 }
             }
-         }
-            
-        
+            arestasRemovidas = arestasRemovidas.OrderBy(a => a.Periodo.Periodos).ToList();
+        }                
         public void adicionarHorarios()
         {
             VerificarArestas();
             arestas.ForEach(lv =>
             {
-                if (!Horario.Any(p => p.Professor.Nome == lv.Professor.Nome))
+                if (!Horario.Any(p => p.Periodo.Periodos == lv.Periodo.Periodos))
                     Horario.Add(new Horario(lv.Professor, lv.Disciplina, lv.Periodo, 1));
-                else if(Horario.First(p => p.Professor.Nome == lv.Professor.Nome).Horarios != 2)
+                else if(Horario.First(p => p.Periodo.Periodos == lv.Periodo.Periodos).Horarios != 2)
                     Horario.Add(new Horario(lv.Professor, lv.Disciplina, lv.Periodo, 2));
             });
-
+            Horario =  Horario.OrderBy(h => h.Periodo.Periodos).ToList();
         }
         public void printarMatriz()
         {
@@ -73,7 +64,7 @@ namespace TI_Grafos
 
             Console.WriteLine("\n Arestas");
             arestas.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + " \t" + "Periodo: " + lv.Periodo.Periodos));
-
+ 
             Console.WriteLine("\n Horarios");
             Horario.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + "\t" + "Periodo: " + lv.Periodo.Periodos + "\t" + "Horario: " + lv.Horarios));
 
@@ -81,7 +72,5 @@ namespace TI_Grafos
             arestasRemovidas.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + "\t" + "Periodo: " + lv.Periodo.Periodos ));
 
         }
-
-
     }
 }
