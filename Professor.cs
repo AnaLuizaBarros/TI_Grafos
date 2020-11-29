@@ -23,5 +23,15 @@ namespace TI_Grafos
 
         public string Nome { get { return nome;  } }
         internal Disciplina Disciplina { get { return disciplina; } }
+
+        public override bool Equals(object obj)
+        {
+            return this.Nome == (obj as Professor).Nome && this.disciplina.Equals((obj as Professor).Disciplina);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.nome.GetHashCode() + this.disciplina.GetHashCode();
+        }
     }
 }

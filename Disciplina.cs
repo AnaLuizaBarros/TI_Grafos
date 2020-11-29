@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TI_Grafos
 {
-    class Disciplina
+    public class Disciplina
     {
         private string disciplinas;
 
@@ -14,5 +14,15 @@ namespace TI_Grafos
         }
 
         public string Disciplinas { get { return disciplinas; } }
+
+        public override bool Equals(object obj)
+        {
+            return this.disciplinas == (obj as Disciplina).Disciplinas;
+        }
+
+        public override int GetHashCode()
+        {
+            return this.disciplinas.GetHashCode();
+        }
     }
 }
