@@ -18,22 +18,22 @@ namespace TI_Grafos
         }
 
 
-        public void adicionarVerticeProfessor(Professor prof, Disciplina disciplina)
+        public void adicionarVerticeProfessor(Professor prof)
         {
-            var aux = new Professor(prof.Nome, disciplina);
-            if (professor.Contains(aux))
+            if (professor.Contains(prof))
             {
 
             }
-            else professor.Add(aux);
+            else professor.Add(prof);
         }
-        public void adicionarVerticePeriodo(Periodo pe)
+        public void adicionarVerticePeriodo(Periodo pe, Disciplina disciplina)
         {
-            if (periodo.Contains(pe))
+            var aux = new Periodo(pe.Periodos, disciplina);
+            if (periodo.Contains(aux))
             {
 
             }
-            else periodo.Add(pe);
+            else periodo.Add(aux);
         }
         public void adicionarAresta(Professor profes, Disciplina disc, Periodo per)
         {
@@ -71,11 +71,11 @@ namespace TI_Grafos
         public void printarMatriz()
         {
             adicionarHorarios();
-            Console.WriteLine("\n Professores e disciplinas");
-            professor.ForEach(lv => Console.WriteLine("Professor: " + lv.Nome + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas));
+            Console.WriteLine("\n Professores");
+            professor.ForEach(lv => Console.WriteLine("Professor: " + lv.Nome ));
 
-            Console.WriteLine("\n Periodo");
-            periodo.ForEach(lv => Console.WriteLine("Periodo: " + lv.Periodos + "\t"));
+            Console.WriteLine("\n Disciplina e Periodo");
+            periodo.ForEach(lv => Console.WriteLine("Disciplina: " + lv.Disciplina.Disciplinas + " \t" + "Periodo: " + lv.Periodos));
 
             Console.WriteLine("\n Arestas");
             arestas.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + " \t" + "Periodo: " + lv.Periodo.Periodos));

@@ -27,8 +27,8 @@ namespace TI_Grafos
                 professor =  new Professor(corte[1]);
                 disciplina = new Disciplina(corte[0]);
                 periodo = new Periodo(Convert.ToInt32(corte[2]));
-                g.adicionarVerticeProfessor(professor, disciplina);
-                g.adicionarVerticePeriodo(periodo);
+                g.adicionarVerticeProfessor(professor);
+                g.adicionarVerticePeriodo(periodo, disciplina);
                 g.adicionarAresta(professor,disciplina,periodo);
             }
             g.printarMatriz();
