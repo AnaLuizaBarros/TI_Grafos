@@ -13,28 +13,16 @@ namespace TI_Grafos
         public List<Periodo> periodo = new List<Periodo>();
         public List<Horario> Horario = new List<Horario>();
 
-        public Grafo()
-        {
-
-        }
-
-
         public void adicionarVerticeProfessor(Professor prof)
         {
-            if (professor.Contains(prof))
-            {
-
-            }
-            else professor.Add(prof);
+            if (!professor.Contains(prof))
+                professor.Add(prof);
         }
         public void adicionarVerticePeriodo(Periodo pe, Disciplina disciplina)
         {
             var aux = new Periodo(pe.Periodos, disciplina);
-            if (periodo.Contains(aux))
-            {
-
-            }
-            else periodo.Add(aux);
+            if (!periodo.Contains(aux))
+                periodo.Add(aux);
         }
         public void adicionarAresta(Professor profes, Disciplina disc, Periodo per)
         {
@@ -77,24 +65,10 @@ namespace TI_Grafos
             VerificarAsrestas();
             arestas.ForEach(lv =>
             {
-                if (Horario.Any(p => p.Professor.Nome == lv.Professor.Nome) || Horario.Any(p => p.Periodo == lv.Periodo))
-                {
-                    if (Horario.Any(p => p.Professor.Nome == lv.Professor.Nome) && Horario.Any(p => p.Periodo == lv.Periodo) && Horario.Any(p => p.Horarios == 1))
-                    {
-                    }
-                    else if ((Horario.Any(p => p.Professor.Nome == lv.Professor.Nome) && Horario.Any(p => p.Periodo == lv.Periodo) && Horario.Any(p => p.Horarios == 2)))
-                    {
-                    }
-                    else if ((Horario.Any(p => p.Professor.Nome == lv.Professor.Nome) && Horario.Any(p => p.Periodo == lv.Periodo) && Horario.Any(p => p.Horarios == 2)))
-                    {
-                    }
-                    else
-                    {
-                        Horario.Add(new Horario(lv.Professor, lv.Disciplina, lv.Periodo, 2));
-                    }
-
-                }
-                else Horario.Add(new Horario(lv.Professor, lv.Disciplina, lv.Periodo, 1));
+                if (!Horario.Any(p => p.Professor.Nome == lv.Professor.Nome))
+                    Horario.Add(new Horario(lv.Professor, lv.Disciplina, lv.Periodo, 1));
+                else if(Horario.First(p => p.Professor.Nome == lv.Professor.Nome).Horarios != 2)
+                    Horario.Add(new Horario(lv.Professor, lv.Disciplina, lv.Periodo, 2));
             });
 
         }
